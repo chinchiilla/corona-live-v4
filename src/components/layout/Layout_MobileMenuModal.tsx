@@ -54,12 +54,12 @@ const LayoutMobileMenuModalTrigger: React.FC<Props> = ({ children }) => {
             <Switch onClick={toggleTheme} checked={colorMode === "dark"} />
           </MenuThemeContainer>
 
-          <MenuThemeContainer onClick={switchLanguage}>
+          <MenuThemeContainer >
             <Row centeredY>
               <LanguageIcon size={16} />
               <MenuText>{t(i18n.resolvedLanguage)}</MenuText>
             </Row>
-            <LanguageButton>
+            <LanguageButton onClick={switchLanguage}>
               {t(i18n.resolvedLanguage === "en" ? "ko" : "en")}
             </LanguageButton>
           </MenuThemeContainer>
