@@ -202,6 +202,7 @@ const MenuThemeContainer = styled(MenuContainer, {
 const MenuText = styled("div", {
   marginLeft: rem(10),
   body1: true,
+  whiteSpace: "nowrap",
 });
 
 export default LayoutMenu;
