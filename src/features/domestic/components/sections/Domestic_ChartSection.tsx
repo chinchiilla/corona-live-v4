@@ -168,13 +168,6 @@ export const DomesticChartSection: React.FC = () => {
     const xAxis = getDefaultChartXAxis({ range, type });
     const yAxis = getDefaultChartYAxis({ range, type });
 
-    const testedPositiveRatesChartConfig = getDefaultChartConfig(subOptions, {
-      tooltipUnit: "%",
-      tooltipLabel: "",
-      info: t("stat.tested_positive_rates.info"),
-      statLabel: t("stat.tested_positive_rates"),
-    });
-
     if (mode === "EXPANDED") {
       const mainOptions = [
         "confirmed",
@@ -197,17 +190,10 @@ export const DomesticChartSection: React.FC = () => {
             data: transformChartData(data[chartMainOption], {
               type,
               range,
-              fractionDigits:
-                chartMainOption === "tested-positive-rates" ? 2 : 0,
             }),
-            config: getDefaultChartConfig(
-              subOptions,
-              chartMainOption === "tested-positive-rates"
-                ? testedPositiveRatesChartConfig
-                : {
-                    statLabel: statLabel[chartMainOption],
-                  }
-            ),
+            config: getDefaultChartConfig(subOptions, {
+              statLabel: statLabel[chartMainOption],
+            }),
           },
         ],
         xAxis,
@@ -259,13 +245,8 @@ export const DomesticChartSection: React.FC = () => {
             data: transformChartData(data, {
               type,
               range,
-              fractionDigits: mainOption === "tested-positive-rates" ? 2 : 0,
             }),
-            config: getDefaultChartConfig(
-              subOptions,
-              mainOption === "tested-positive-rates" &&
-                testedPositiveRatesChartConfig
-            ),
+            config: getDefaultChartConfig(subOptions),
           },
         ];
       }
@@ -300,7 +281,7 @@ export const DomesticChartSectionSkeleton = () => {
 
   return (
     <Section>
-      <ChartSkeleton tabs={5} mode={chartMode} charts={5} />
+      <ChartSkeleton tabs={5} mode={chartMode} charts={4} />
     </Section>
   );
 };
