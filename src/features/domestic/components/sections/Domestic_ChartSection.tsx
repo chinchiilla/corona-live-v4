@@ -40,8 +40,7 @@ type DomesticMainOption =
   | "confirmed"
   | "deceased"
   | "tested"
-  | "confirmed-critical"
-  | "tested-positive-rates";
+  | "confirmed-critical";
 
 type ChartCompareOptionValue =
   | "yesterday"
@@ -131,15 +130,6 @@ export const DomesticChartSection: React.FC = () => {
             range: generateChartRangeSubOptions(),
           },
         },
-        "tested-positive-rates": {
-          label: t("stat.tested_positive_rates"),
-          options: {
-            type: generateChartTypeSubOptions({
-              omit: ["live", "accumulated", "monthly"],
-            }),
-            range: generateChartRangeSubOptions({ disable: ["all"] }),
-          },
-        },
         tested: {
           label: t("stat.tested"),
           options: {
@@ -159,7 +149,6 @@ export const DomesticChartSection: React.FC = () => {
       deceased: t("stat.deceased"),
       confirmed: t("stat.confirmed"),
       "confirmed-critical": t("stat.confirmed_critical"),
-      "tested-positive-rates": t("stat.tested_positive_rates"),
     }),
     [i18n.resolvedLanguage]
   );
@@ -191,7 +180,6 @@ export const DomesticChartSection: React.FC = () => {
         "confirmed",
         "confirmed-critical",
         "deceased",
-        "tested-positive-rates",
         "tested",
       ] as Array<DomesticMainOption>;
 
