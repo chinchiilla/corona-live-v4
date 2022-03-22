@@ -38,8 +38,6 @@ export const CityTableSection: React.FC = () => {
 
   const { t } = useTranslation();
 
-  const cityName = useMemo(() => getCityGuNameWithIds(params.cityId), [params]);
-
   const columns: Array<TableColumn<any>> = [
     {
       id: "guName",
@@ -49,7 +47,7 @@ export const CityTableSection: React.FC = () => {
     {
       id: "casesLive",
       name: t("stat.confirmed_today"),
-      width: rem(350),
+      width: rem(100),
       sortable: true,
       defaultSortBy: true,
     },
