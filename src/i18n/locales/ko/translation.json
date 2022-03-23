@@ -495,8 +495,6 @@
   "stat.hospitalised": "입원환자",
   "stat.confirmed_critical": "위중증자",
   "stat.tested": "검사자",
-  "stat.tested_positive_rates": "확진율",
-  "stat.tested_positive_rates.info": "= 확진자수 / 전일 검사건수",
   "stat.confirmed_cases_per_100k": "10만명당 확진자",
   "stat.confirmed_cases_per_1m": "100만명당 확진자",
   "stat.confirmed_today": "오늘 확진자",

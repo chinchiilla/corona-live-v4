@@ -499,8 +499,6 @@
   "stat.hospitalised": "Hospitalised",
   "stat.confirmed_critical": "Critical",
   "stat.tested": "Tested",
-  "stat.tested_positive_rates": "Positive Ratio",
-  "stat.tested_positive_rates.info": "",
   "stat.confirmed_cases_per_100k": "Cases per 100k",
   "stat.confirmed_cases_per_1m": "Cases per 1m",
   "stat.confirmed_today": "New cases today",
