@@ -162,7 +162,8 @@ export const Tabs = <T extends any>({
         },0) ${tabIndicatorTransform ?? ""}`,
         ...(indicatorStyleInitialised.current && animation === true
           ? {
-              transition: `${TRANSITION_DURATION}ms ease 0s`,
+              transition: `all ${TRANSITION_DURATION}ms ease`,
+              transitionProperty: "transform, width, height",
             }
           : {}),
       };
@@ -273,7 +274,6 @@ const TabIndicator = styled("div", {
   position: "absolute",
 
   willChange: "transform, width, height",
-  transitionProperty: "transform, width, height",
 
   variants: {
     orientation: {
