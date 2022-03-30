@@ -41,7 +41,7 @@ export const LiveUpdatesRowSkeleton: React.FC<{ type?: "preview" }> = ({
   return (
     <Wrapper
       preview={type === "preview"}
-      css={{ height: type === "preview" ? "auto" : rem(50) }}
+      css={{ height: type === "preview" ? "auto" : rem(50), borderTop: "none" }}
     >
       <Skeleton w={64} h={18} />
       <Skeleton w={150} h={18} />

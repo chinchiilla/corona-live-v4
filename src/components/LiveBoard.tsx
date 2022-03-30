@@ -101,11 +101,9 @@ export const LiveBoard: React.FC<Props> = ({
           ),
         })
       ) : (
-        <>
-          <LiveUpdatesContainer>
-            <MockLiveUpdatesRow>추가 확진자가 없어요</MockLiveUpdatesRow>
-          </LiveUpdatesContainer>
-        </>
+        <LiveUpdatesContainer>
+          <MockLiveUpdatesRow>추가 확진자가 없어요</MockLiveUpdatesRow>
+        </LiveUpdatesContainer>
       )}
     </Wrapper>
   );
@@ -123,16 +121,16 @@ export const LiveBoardSkeleton: React.FC<{ columns: number }> = ({
           </CurrentValueLabel>
           <Space h={8} />
           <CurrentValue>
-            <Skeleton w={75} h={35} />
+            <Skeleton w={75} h={28} />
           </CurrentValue>
         </CurrentValueContainer>
         {createEmptyArray(columns, 2).map((column, index) => (
           <Column key={index}>
             {column.map((_, index) => (
               <ComparedValueContainer key={index}>
-                <Skeleton w={50} h={21} />
+                <Skeleton w={50} h={20} />
                 <Space w={6} />
-                <Skeleton w={60} h={21} />
+                <Skeleton w={60} h={20} />
               </ComparedValueContainer>
             ))}
           </Column>
