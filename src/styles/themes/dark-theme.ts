@@ -24,7 +24,7 @@ export const darkTheme = createTheme("dark-theme", {
     gray500: "#7E8186",
     gray400: "#999999",
     gray300: "#444954",
-    gray200: "#0F1421",
+    gray200: "#2b2f3b",
     gray100: "#272B38",
 
     grayA100: "#999999FF",
@@ -66,6 +66,7 @@ export const darkTheme = createTheme("dark-theme", {
 
     /* */
     background: "#0F1421",
+    mobileBackground: "#0F1421",
 
     shadowBackground1: "#272B38",
     shadowBackground2: "#202633",

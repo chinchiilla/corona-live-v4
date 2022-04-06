@@ -30,7 +30,7 @@ export const { styled, css, theme, createTheme, globalCss, config, keyframes } =
         gray500: "#C3C3C3",
         gray400: "#D8D8D8",
         gray300: "#ECECEC",
-        gray200: "#F3F4F5",
+        gray200: "#F2F4F6",
         gray100: "#F5F5F5",
 
         grayA100: "#D8D8D8FF",
@@ -73,6 +73,7 @@ export const { styled, css, theme, createTheme, globalCss, config, keyframes } =
         /* */
 
         background: "#FFFFFF",
+        mobileBackground: "#F3F4F5",
 
         mapStroke: "#FFFFFF",
         mapLabelBackground: "#FFFFFF",

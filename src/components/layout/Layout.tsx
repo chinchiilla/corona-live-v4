@@ -51,7 +51,7 @@ const Layout: React.FC<Props> = ({ children, hideMobileHeader }) => {
 
 const Wrapper = styled("div", {
   rowCenteredX: true,
-  background: "$gray200",
+  background: "$mobileBackground",
   height: "max-content",
   width: "100vw",
 
