@@ -104,13 +104,6 @@ const LayoutMenu: React.FC = () => {
             <MenuText>{t("menu.report")}</MenuText>
           </MenuContainer>
         </ReportModalTrigger>
-
-        <GithubLink target="_blank" href={GITHUB_URL}>
-          <MenuContainer>
-            <GithubIcon />
-            <MenuText>Github</MenuText>
-          </MenuContainer>
-        </GithubLink>
       </Section>
     </Wrapper>
   );
