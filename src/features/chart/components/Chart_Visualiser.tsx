@@ -1021,6 +1021,7 @@ const ChartTitleText = styled("div", {
   heading3: true,
   color: "$gray900",
   borderRadius: rem(6),
+  whiteSpace: "nowrap",
 
   "& span": {
     fontWeight: 400,
