@@ -78,7 +78,7 @@ export const InstagramIconButton: React.FC = () => (
 
 export const GithubIconButton: React.FC = () => (
   <IconButton
-    css={{ background: "$gray300" }}
+    css={{ background: "$gray100" }}
     href={GITHUB_URL}
     target="_blank"
   >
