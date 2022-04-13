@@ -50,14 +50,14 @@ export const EmailIconButton: React.FC = () => {
         setCopied(true);
       }}
     >
-      <IconButton css={{ background: "$gray300" }}>
+      <IconButton css={{ background: "$gold100" }}>
         {copied ? (
           <IconContainer key={"copied"}>
-            <CheckIcon size={18} />
+            <CheckIcon size={18} fill={theme.colors.gold500} />
           </IconContainer>
         ) : (
           <IconContainer key={"not-copied"}>
-            <EmailIcon size={18} />
+            <EmailIcon size={18} fill={theme.colors.gold500} />
           </IconContainer>
         )}
       </IconButton>

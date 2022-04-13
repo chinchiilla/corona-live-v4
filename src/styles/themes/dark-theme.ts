@@ -64,6 +64,12 @@ export const darkTheme = createTheme("dark-theme", {
     pink500: "#bf2e70",
     pink100: "#bf2e7030",
 
+    /**
+     * gold
+     */
+    gold500: "#dca83d",
+    gold100: "#3a3a31",
+
     /* */
     background: "#0F1421",
     mobileBackground: "#0F1421",

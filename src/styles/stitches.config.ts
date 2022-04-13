@@ -70,6 +70,12 @@ export const { styled, css, theme, createTheme, globalCss, config, keyframes } =
         pink500: "#BF2E70",
         pink100: "#F7E5ED",
 
+        /**
+         * gold
+         */
+        gold500: "#cb9110",
+        gold100: "#fbf1d8",
+
         /* */
 
         background: "#FFFFFF",
