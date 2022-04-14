@@ -79,6 +79,7 @@ const LayoutMobileMenuModalTrigger: React.FC<Props> = ({ children }) => {
 
 const Wrapper = styled("div", {
   column: true,
+  marginBottom: rem(16),
 
   "& button": {
     color: "$gray900",
