@@ -30,14 +30,8 @@ export const CityStatSection: React.FC = () => {
       delta: data.overview.deceased[1],
     },
     {
-      label: t("stat.recovered"),
-      color: "blue",
-      value: data.overview.recovered[0],
-      delta: data.overview.recovered[1],
-    },
-    {
       label: t("stat.confirmed_cases_per_100k"),
-      color: "grey",
+      color: "blue",
       value: data.overview.per100k[0],
       delta: data.overview.per100k[1],
     },
