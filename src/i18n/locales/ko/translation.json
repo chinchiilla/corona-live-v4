@@ -604,5 +604,8 @@
   "date.d": "일",
   "date.h": "시간",
   "date.m": "분",
-  "date.s": "초"
+  "date.s": "초",
+
+  "date.week.suffix":"주",
+  "date.week.prefix":""
 }

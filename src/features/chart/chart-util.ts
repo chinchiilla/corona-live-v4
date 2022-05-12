@@ -255,7 +255,7 @@ export const getDefaultChartXAxis = (
 
         case "weekly": {
           const weekNumber = Math.ceil((value as Dayjs).date() / 7);
-          return `${dayjs(value).format("MMM")}. ${weekNumber}"`;
+          return `${dayjs(value).format("MMM")} ${t("date.week.prefix")}${weekNumber}${t("date.week.suffix")}`;
         }
 
         case "monthly":
@@ -275,7 +275,8 @@ export const getDefaultChartXAxis = (
 
         case "weekly": {
           const weekNumber = Math.ceil((value as Dayjs).date() / 7);
-          return `${dayjs(value).format("YYYY MMM")} ${weekNumber}"`;
+
+          return `${dayjs(value).format("YYYY MMM")} ${t("date.week.prefix")}${weekNumber}${t("date.week.suffix")}`;
         }
 
         case "monthly":

@@ -611,5 +611,8 @@
   "date.d": "d",
   "date.h": "h",
   "date.m": "m",
-  "date.s": "s"
+  "date.s": "s",
+
+  "date.week.suffix":"",
+  "date.week.prefix":"W"
 }
