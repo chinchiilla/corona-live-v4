@@ -147,6 +147,7 @@ interface Props extends ChartVisualiserData {
   mode: ChartMode;
   selectedX: string;
   setSelectedX: (value) => void;
+  resetSelectedX: () => void;
   lastIndex?: boolean;
 }
 
@@ -158,6 +159,7 @@ const ChartVisualiser: React.FC<Props> = ({
   dataSource,
   selectedX,
   setSelectedX,
+  resetSelectedX,
   lastIndex,
 }) => {
   const { t } = useTranslation();
@@ -588,8 +590,15 @@ const ChartVisualiser: React.FC<Props> = ({
       }
     }
 
+    function touchcancel() {
+      resetSelectedX();
+    }
+
     $container.selectAll("*").attr("pointer-events", "none");
-    $container.on("mousemove", mousemove).on("touchmove", mousemove);
+    $container
+      .on("mousemove", mousemove)
+      .on("touchmove", mousemove)
+      .on("touchend", touchcancel);
   }, [svgRef, dataSet, yScales]);
 
   useEffect(() => {

@@ -116,7 +116,16 @@ const Chart = <MainOption extends string, SubOption extends string>(
     }
   }, [_mode, chartData, isLoading]);
 
-  const chartVisualiserProps = { mode, selectedX, setSelectedX };
+  const resetSelectedX = () => {
+    dispatch({ type: "RESET_SELECTED_X" });
+  };
+
+  const chartVisualiserProps = {
+    mode,
+    selectedX,
+    setSelectedX,
+    resetSelectedX,
+  };
 
   return (
     <Wrapper style={{ height: wrapperHeight }}>

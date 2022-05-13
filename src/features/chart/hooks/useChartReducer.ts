@@ -16,7 +16,7 @@ const createReducer =
     action: ChartReducerAction<MainOption, SubOption>
   ): ChartReducerState<MainOption, SubOption> => {
     switch (action.type) {
-      case "SET_CHART_DATA":
+      case "SET_CHART_DATA": {
         const xValues = Object.keys(
           action.payload.chartData[0].dataSet[0].data
         );
@@ -26,6 +26,14 @@ const createReducer =
           chartData: action.payload.chartData,
           selectedX: xValues[xValues.length - 1],
         };
+      }
+      case "RESET_SELECTED_X": {
+        const xValues = Object.keys(state.chartData[0].dataSet[0].data);
+        return {
+          ...state,
+          selectedX: xValues[xValues.length - 1],
+        };
+      }
 
       case "TOGGLE_MODE": {
         const mode = state.mode === "DEFAULT" ? "EXPANDED" : "DEFAULT";

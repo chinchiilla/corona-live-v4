@@ -35,4 +35,5 @@ export type ChartReducerAction<
       payload: { optionName: string; value: SubOption };
     }
   | { type: "SET_MAIN_OPTION"; payload: { value: MainOption } }
-  | { type: "SET_SELECTEDX"; payload: { value: any } };
+  | { type: "SET_SELECTEDX"; payload: { value: any } }
+  | { type: "RESET_SELECTED_X" };
